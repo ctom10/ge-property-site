@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GE Property Development</title>
+<meta name="description" content="GE Property Development — general contracting based in Saranac Lake, NY, serving Lake Placid, Tupper Lake, Plattsburgh, Malone and a 50-mile radius. New construction, excavation, decks, remodels and roofing. Free estimates. Call (518) 637-8846.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Plan: one committed world, charcoal job-site bands alternating with poured-concrete grey,
+   sand used only for the phone number and key marks.
+   Layout: heavy condensed headlines set flush-left like stenciled site signage. */
+:root{
+  --ink:#16171a;
+  --char:#1f2124;
+  --concrete:#d6d6d4;
+  --concrete-2:#c9c9c6;
+  --line:#a9a8a1;
+  --sand:#cbb48a;
+  --sand-hi:#dcc8a2;
+  --paper:#ededeb;
+  --muted:#55565a;
+  --font-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --font-body:"Barlow","Helvetica Neue",Arial,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--concrete);color:var(--ink);font-family:var(--font-body);font-size:18px;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sand);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);text-transform:uppercase;line-height:.92;margin:0;text-wrap:balance;letter-spacing:.01em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.mono{font-family:var(--font-mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+
+/* Header */
+header{background:var(--char);color:var(--paper);position:sticky;top:0;z-index:10;border-bottom:4px solid var(--sand)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:52px;height:52px;filter:invert(1)}
+.brand span{font-family:var(--font-display);font-weight:800;font-size:22px;text-transform:uppercase;line-height:1}
+.brand small{display:block;font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:#b9b8b2;font-weight:500;margin-top:3px}
+nav{display:flex;align-items:center;gap:26px}
+nav a.link{text-decoration:none;font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:#d8d7d1}
+nav a.link:hover{color:var(--sand)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--sand);color:var(--ink);text-decoration:none;font-weight:600;font-size:16px;padding:12px 18px;border-radius:2px;border:0;cursor:pointer;font-family:var(--font-body);white-space:nowrap}
+.btn:hover{background:var(--sand-hi)}
+.btn.ghost{background:transparent;color:var(--paper);box-shadow:inset 0 0 0 2px #5a5c60}
+.btn.ghost:hover{box-shadow:inset 0 0 0 2px var(--sand)}
+@media (max-width:860px){nav a.link{display:none}}
+@media (max-width:480px){.brand small{display:none}.brand span{font-size:17px}.brand img{width:42px;height:42px}.bar .btn{padding:10px 12px;font-size:14px}.bar .btn .num{display:none}}
+
+/* Service area bar */
+.areabar{background:var(--sand);color:var(--ink)}
+.areabar .wrap{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 18px;padding-top:12px;padding-bottom:12px}
+.areabar strong{font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:22px;line-height:1.05;letter-spacing:.01em}
+.areabar span{font-weight:600;font-size:16px}
+.areabar strong i,.areabar strong b{font-style:normal;font-weight:inherit}
+@media (max-width:600px){.areabar .sep{display:none}.areabar .r{display:block}}
+@media (max-width:480px){.areabar strong{font-size:19px}.areabar span{font-size:15px}}
+
+/* Hero */
+.hero{background:var(--char);color:var(--paper);overflow:hidden;position:relative}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:14px;
+  background:repeating-linear-gradient(-45deg,var(--sand) 0 18px,var(--ink) 18px 36px)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:96px}
+.hero .mono{color:var(--sand)}
+.hero h1{font-size:clamp(50px,7.4vw,104px);font-weight:900;margin:18px 0 26px}
+.hero h1 .l{display:block;animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 .l:nth-child(2){animation-delay:.08s}
+.hero h1 .l:nth-child(2){color:var(--sand)}
+@keyframes rise{from{transform:translateY(24px);opacity:.15}to{transform:none;opacity:1}}
+.badge{display:inline-block;background:var(--sand);color:var(--ink);font-family:var(--font-mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:7px 12px;font-weight:500}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.hero p.lede{font-size:21px;max-width:34ch;color:#d8d7d1;margin:0 0 32px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-logo{justify-self:center;width:min(420px,100%);filter:invert(1);opacity:.96}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;padding-top:48px;padding-bottom:72px}.hero-logo{width:240px;justify-self:start;order:-1}}
+
+/* Services */
+section{padding:88px 0;scroll-margin-top:76px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.head h2{font-size:clamp(44px,6vw,76px);font-weight:900}
+.head p{max-width:42ch;margin:0;color:var(--muted)}
+.svc{border-top:3px solid var(--ink)}
+.row{display:grid;grid-template-columns:90px 1.1fr 1fr;gap:32px;padding:34px 0;border-bottom:1px solid var(--line);align-items:start}
+.row .n{font-family:var(--font-display);font-weight:900;font-size:56px;line-height:.8;color:var(--ink);-webkit-text-stroke:0}
+.row h3{font-size:clamp(36px,4.4vw,54px);font-weight:800;margin-bottom:12px}
+.row p{margin:0;max-width:46ch}
+.row ul{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:0}
+.row li{font-family:var(--font-mono);font-size:13.5px;letter-spacing:.05em;text-transform:uppercase;padding:9px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px}
+.row li::before{content:"";flex:0 0 8px;height:8px;margin-top:6px;background:var(--sand);box-shadow:0 0 0 1px var(--ink)}
+.row:hover .n{color:var(--sand);-webkit-text-stroke:1.5px var(--ink)}
+@media (max-width:860px){.row{grid-template-columns:1fr;gap:14px}.row .n{font-size:40px}}
+
+/* Contact */
+.contact{background:var(--ink);color:var(--paper);text-align:left}
+.contact .mono{color:var(--sand)}
+.contact h2{font-size:clamp(44px,6vw,76px);font-weight:900;margin:14px 0 18px}
+.phone{display:inline-block;font-family:var(--font-display);font-weight:900;font-size:clamp(56px,11vw,150px);line-height:.9;color:var(--sand);text-decoration:none;letter-spacing:.005em;font-variant-numeric:tabular-nums}
+.phone:hover{text-decoration:underline;text-decoration-thickness:6px;text-underline-offset:10px}
+.contact p{max-width:52ch;color:#cfcec8}
+.contact .cta{margin-top:28px}
+.copied{font-family:var(--font-mono);font-size:13px;color:var(--sand);align-self:center;min-height:1em}
+
+/* About */
+.about{background:var(--paper)}
+.about-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center}
+.about-photo{margin:0;border:3px solid var(--ink);background:var(--ink)}
+.about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 60%}
+.about-photo figcaption{color:var(--paper);padding:10px 14px}
+.about .mono.eyebrow{color:var(--muted)}
+.about h2{font-size:clamp(44px,6vw,76px);font-weight:900;margin:14px 0 22px}
+.about p{max-width:54ch;margin:0 0 16px}
+.about .cta{margin-top:26px}
+.about .btn.ghost{color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr;gap:32px}.about-photo{max-width:460px}}
+
+/* Work slideshow */
+.work{background:var(--ink);color:var(--paper);padding:88px 0}
+.work .head p{color:#b9b8b2}
+.show{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:36px;align-items:stretch}
+.stage{position:relative;aspect-ratio:4/5;max-height:720px;width:100%;background:#0d0d0f;overflow:hidden;border:3px solid var(--paper);touch-action:pan-y}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;pointer-events:none}
+.slide.on{opacity:1;pointer-events:auto}
+.slide .bg{position:absolute;inset:-30px;background-size:cover;background-position:center;filter:blur(24px) brightness(.45)}
+.slide img{position:relative;width:100%;height:100%;object-fit:contain}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border:0;border-radius:2px;background:var(--sand);color:var(--ink);font-size:26px;font-weight:700;cursor:pointer;z-index:2;display:grid;place-items:center}
+.arrow:hover{background:var(--sand-hi)}
+.arrow.prev{left:12px}.arrow.next{right:12px}
+.count{position:absolute;left:12px;bottom:12px;z-index:2;background:var(--ink);color:var(--paper);padding:6px 10px}
+.side{display:flex;flex-direction:column;gap:22px}
+.cap .mono{color:var(--sand)}
+.cap h3{font-size:clamp(34px,4vw,52px);font-weight:800;margin:10px 0 0;min-height:2em}
+.thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:auto}
+.thumbs button{padding:0;border:2px solid transparent;background:none;cursor:pointer;aspect-ratio:1;overflow:hidden;opacity:.55;transition:opacity .2s}
+.thumbs button img{width:100%;height:100%;object-fit:cover}
+.thumbs button:hover{opacity:.9}
+.thumbs button[aria-current="true"]{opacity:1;border-color:var(--sand)}
+.play{align-self:flex-start}
+@media (max-width:860px){.show{grid-template-columns:1fr}.stage{aspect-ratio:4/5;max-height:80vh}.thumbs{grid-template-columns:repeat(6,1fr)}.cap h3{min-height:0}}
+@media (max-width:480px){.thumbs{grid-template-columns:repeat(4,1fr)}.arrow{width:44px;height:44px}}
+
+footer{background:var(--char);color:#a9a8a1;padding:28px 0;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="GE Property Development, home">
+      <img src="logo.png" alt="">
+      <span>GE Property<br>Development<small>Saranac Lake, NY</small></span>
+    </a>
+    <nav aria-label="Main">
+      <a class="link" href="#work">Our work</a>
+      <a class="link" href="#about">About</a>
+      <a class="link" href="#services">Services</a>
+      <a class="link" href="#contact">Contact</a>
+      <a class="btn" href="tel:+15186378846">Call<span class="num"> (518) 637-8846</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="areabar" aria-label="Service area">
+    <div class="wrap">
+      <strong>Based in Saranac Lake, NY<i class="sep"> &middot; </i><b class="r">Serving a 50-mile radius</b></strong>
+      <span>Lake Placid, Tupper Lake, Plattsburgh, Malone</span>
+    </div>
+  </div>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="mono">General Contracting &middot; Based in Saranac Lake, NY</div>
+        <h1 id="hero-title"><span class="l">Making your house,</span><span class="l">a dream home.</span></h1>
+        <p class="lede">Ground-up construction, excavation, decks, remodels and roofing. Locally owned and operated, serving the Tri-Lakes area and beyond.</p>
+        <p class="badges"><span class="badge">Free estimates</span><span class="badge">No job too big or small</span><span class="badge">Locally owned &amp; operated</span></p>
+        <div class="cta">
+          <a class="btn" href="tel:+15186378846">Call for a free estimate</a>
+          <a class="btn ghost" href="#work">See our work</a>
+        </div>
+      </div>
+      <img class="hero-logo" src="logo.png" alt="GE Property Development, General Contracting logo">
+    </div>
+  </section>
+
+  <section class="work" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="work-title">Recent work</h2>
+        <p>Real jobs from our crew: site work, concrete, framing, decks and finished renovations.</p>
+      </div>
+      <div class="show" aria-roledescription="carousel" aria-label="Project photos">
+        <div class="stage" id="stage">
+          <button class="arrow prev" id="prev" type="button" aria-label="Previous photo">&#8249;</button>
+          <button class="arrow next" id="next" type="button" aria-label="Next photo">&#8250;</button>
+          <div class="count mono" id="count" aria-live="polite">1 / 15</div>
+        </div>
+        <div class="side">
+          <div class="cap">
+            <div class="mono" id="cap-tag">Ground-up construction</div>
+            <h3 id="cap-title">Two-story garage build, windows in</h3>
+          </div>
+          <button class="btn ghost play" id="play" type="button">Pause slideshow</button>
+          <div class="thumbs" id="thumbs"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="wrap about-grid">
+      <figure class="about-photo">
+        <img src="work/18.jpg" alt="Grant Eckardt, owner of GE Property Development, in front of a two-story garage build" loading="lazy">
+        <figcaption class="mono">Grant Eckardt &middot; Owner</figcaption>
+      </figure>
+      <div>
+        <div class="mono eyebrow">About the owner &middot; Locally owned &amp; operated</div>
+        <h2 id="about-title">Meet Grant Eckardt</h2>
+        <p>Hi, I&#8217;m Grant Eckardt, owner of GE Property Development. I&#8217;ve always enjoyed working with my hands, building things, and seeing a project come together from start to finish. From taking shop and building trade classes through middle and high school to getting a construction management degree from SUNY Canton, I&#8217;ve always had a focus on learning and becoming a better builder.</p>
+        <p>What I love most about this business is getting to work directly with homeowners and helping turn their ideas into reality. I take a lot of pride in my work and believe that quality craftsmanship, honesty, and good communication go a long way.</p>
+        <p>My goal is simple: to provide work I&#8217;m proud to put my name on and make sure every customer feels confident and excited about the finished product.</p>
+        <div class="cta">
+          <a class="btn" href="tel:+15186378846">Call for a free estimate</a>
+          <a class="btn ghost" href="#services">See our services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" aria-labelledby="svc-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="svc-title">What we build</h2>
+        <p>No job too big or small. Call us for a single repair, or hand us the whole project.</p>
+      </div>
+      <div class="svc">
+        <article class="row">
+          <div class="n">01</div>
+          <div>
+            <h3>Ground-up construction</h3>
+            <p>Bare land to move-in ready. We handle the site work, the foundation and the framing ourselves, so your build stays with one contractor the whole way through.</p>
+          </div>
+          <ul>
+            <li>New homes &amp; camps</li>
+            <li>Garages &amp; outbuildings</li>
+            <li>Additions</li>
+            <li>Site prep through final finish</li>
+          </ul>
+        </article>
+        <article class="row">
+          <div class="n">02</div>
+          <div>
+            <h3>Excavation</h3>
+            <p>Our own machines on your site. Clearing, digging and grading done right, so everything that sits on top of it lasts.</p>
+          </div>
+          <ul>
+            <li>Lot &amp; land clearing</li>
+            <li>Foundation &amp; footing digs</li>
+            <li>Driveways, grading &amp; backfill</li>
+            <li>Trenching for utilities &amp; drainage</li>
+          </ul>
+        </article>
+        <article class="row">
+          <div class="n">03</div>
+          <div>
+            <h3>Decks</h3>
+            <p>New decks, rebuilds and repairs, built to handle lake-country weather and a winter&#8217;s worth of snow. We set the footings, frame it solid and finish it clean.</p>
+          </div>
+          <ul>
+            <li>New decks &amp; full rebuilds</li>
+            <li>Porches, stairs &amp; railings</li>
+            <li>Pressure-treated or composite</li>
+            <li>Footings below the frost line</li>
+          </ul>
+        </article>
+        <article class="row">
+          <div class="n">04</div>
+          <div>
+            <h3>Kitchen &amp; bath remodels</h3>
+            <p>Tired kitchens and dated bathrooms turned into rooms you want to spend time in, from layout changes to the last piece of trim.</p>
+          </div>
+          <ul>
+            <li>Kitchen remodels</li>
+            <li>Bathroom remodels</li>
+            <li>Flooring &amp; trim</li>
+            <li>Interior stairs &amp; railings</li>
+          </ul>
+        </article>
+        <article class="row">
+          <div class="n">05</div>
+          <div>
+            <h3>Roofs</h3>
+            <p>A solid roof built for mountain winters, whether it&#8217;s a full replacement, a repair or the roof on a brand-new build.</p>
+          </div>
+          <ul>
+            <li>Tear-offs &amp; re-roofs</li>
+            <li>Roof repairs</li>
+            <li>Roofs on new builds &amp; additions</li>
+            <li>Built for heavy snow loads</li>
+          </ul>
+        </article>
+        <article class="row">
+          <div class="n">06</div>
+          <div>
+            <h3>Concrete &amp; more</h3>
+            <p>Footings, slabs and everything in between, plus the jobs that don&#8217;t fit a category. If it&#8217;s on your property, give us a call.</p>
+          </div>
+          <ul>
+            <li>Foundations, slabs &amp; garage floors</li>
+            <li>Patios, walkways &amp; steps</li>
+            <li>Fencing</li>
+            <li>Repairs &amp; odd jobs</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="mono">Free estimates</div>
+      <h2 id="contact-title">Call for a free estimate</h2>
+      <a class="phone" href="tel:+15186378846">(518) 637-8846</a>
+      <p>Call or text with a description of the job and where it is. We'll come look at the site and give you a free estimate. No job too big or small.</p>
+      <div class="cta">
+        <a class="btn" href="tel:+15186378846">Call now</a>
+        <a class="btn ghost" href="sms:+15186378846">Send a text</a>
+        <button class="btn ghost" id="copy-phone" type="button">Copy number</button>
+        <span class="copied" id="copied" aria-live="polite"></span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>GE Property Development &middot; Based in Saranac Lake, NY &middot; Serving a 50-mile radius</span>
+    <span>Free estimates &middot; (518) 637-8846 &middot; &copy; 2026</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var photos = [
+    ['17','Ground-up construction','Two-story garage build, windows in'],
+    ['10','Ground-up construction','Garage addition framing'],
+    ['01','Decks','Porch, steps & walkways'],
+    ['15','Excavation','New driveway cut and stoned'],
+    ['16','Excavation','Dumping stone for a driveway base'],
+    ['11','Excavation','Cutting in a new driveway'],
+    ['06','Concrete','Slab forms set and ready to pour'],
+    ['09','Concrete','Fresh concrete slab'],
+    ['08','Decks','Deck framing on a new build'],
+    ['07','Decks','Pressure-treated deck & stairs'],
+    ['03','Remodels','Kitchen remodel'],
+    ['04','Remodels','Interior stairs & railing'],
+    ['12','Equipment','Excavator loaded and ready to roll'],
+    ['14','Excavation','Hauling to a driveway job'],
+    ['02','Fencing','Privacy fence']
+  ];
+  var stage = document.getElementById('stage'), thumbs = document.getElementById('thumbs');
+  var count = document.getElementById('count'), tag = document.getElementById('cap-tag'), title = document.getElementById('cap-title');
+  var playBtn = document.getElementById('play');
+  var slides = [], tbtns = [], i = 0, timer = null;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var playing = !reduce;
+
+  photos.forEach(function(p, n){
+    var s = document.createElement('div');
+    s.className = 'slide' + (n === 0 ? ' on' : '');
+    s.setAttribute('role','group'); s.setAttribute('aria-roledescription','slide');
+    s.setAttribute('aria-label', (n+1) + ' of ' + photos.length + ': ' + p[2]);
+    var bg = document.createElement('div'); bg.className = 'bg'; bg.style.backgroundImage = 'url(work/t' + p[0] + '.jpg)';
+    var img = document.createElement('img'); img.src = 'work/' + p[0] + '.jpg'; img.alt = p[2];
+    if (n > 1) img.loading = 'lazy';
+    s.appendChild(bg); s.appendChild(img); stage.insertBefore(s, document.getElementById('prev'));
+    slides.push(s);
+    var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label','Show photo ' + (n+1) + ': ' + p[2]);
+    var t = document.createElement('img'); t.src = 'work/t' + p[0] + '.jpg'; t.alt = '';
+    b.appendChild(t); b.addEventListener('click', function(){ go(n); restart(); });
+    thumbs.appendChild(b); tbtns.push(b);
+  });
+
+  function go(n){
+    i = (n + slides.length) % slides.length;
+    slides.forEach(function(s, k){ s.classList.toggle('on', k === i); });
+    tbtns.forEach(function(b, k){ b.setAttribute('aria-current', k === i ? 'true' : 'false'); });
+    count.textContent = (i+1) + ' / ' + slides.length;
+    tag.textContent = photos[i][1]; title.textContent = photos[i][2];
+  }
+  function restart(){ clearInterval(timer); if (playing) timer = setInterval(function(){ go(i+1); }, 4500); }
+  function setPlay(v){ playing = v; playBtn.textContent = v ? 'Pause slideshow' : 'Play slideshow'; restart(); }
+
+  document.getElementById('prev').addEventListener('click', function(){ go(i-1); restart(); });
+  document.getElementById('next').addEventListener('click', function(){ go(i+1); restart(); });
+  playBtn.addEventListener('click', function(){ setPlay(!playing); });
+  stage.addEventListener('mouseenter', function(){ clearInterval(timer); });
+  stage.addEventListener('mouseleave', restart);
+  document.addEventListener('keydown', function(e){
+    if (!document.getElementById('work').contains(document.activeElement)) return;
+    if (e.key === 'ArrowLeft'){ go(i-1); restart(); }
+    if (e.key === 'ArrowRight'){ go(i+1); restart(); }
+  });
+  var x0 = null;
+  stage.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+  stage.addEventListener('touchend', function(e){
+    if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40){ go(dx < 0 ? i+1 : i-1); restart(); }
+  });
+  go(0); setPlay(playing);
+})();
+
+document.getElementById('copy-phone').addEventListener('click', async function(){
+  var out = document.getElementById('copied');
+  try { await navigator.clipboard.writeText('(518) 637-8846'); out.textContent = 'Number copied'; }
+  catch(e){ out.textContent = '(518) 637-8846'; }
+});
+</script>
+</body>
+</html>
